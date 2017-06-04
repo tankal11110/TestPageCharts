@@ -1,11 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
+    <head>
+  		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  		<script type="text/javascript">
 
+    		google.charts.load('current', {'packages':['corechart']});
+      		google.charts.setOnLoadCallback(drawChart);
+
+      		function drawChart() {
+      			var data = google.visualization.arrayToDataTable([
+          			['Week', 'Net Comp', 'Analyzer HR', 'Question Right'],
+          			['Week48', 600, 400, 300],
+          			['Week49', 700, 300, 100],
+          			['Week50', 800, 500, 300],
+          			['Week51', 900, 700, 300],
+          			['Week52', 300, 200, 100]
+        		]);
+
+        		var options = {
+          			vAxis: {
+            			ticks: [0, 500, 1000]
+          			},
+          		
+          			colors:['#ed6e37','#259e01','#15a0c8'],
+           		
+           			legend:{
+              			position:"bottom"
+            		},
+        		};
+
+        		var chart = new google.visualization.AreaChart(document.getElementById('revenue'));
+        		chart.draw(data, options);
+      }
+
+      
+    </script>
   </head>
 
   <body>
-    <!--Div that will hold the pie chart-->
+    
+    <div>
+  		<div id="revenue"></div>
+  	</div>
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="main.js"></script>
  
