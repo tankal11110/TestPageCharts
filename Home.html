@@ -2,78 +2,44 @@
 <html>
     <head>
   		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  		<script type="text/javascript">
+  		<link rel="stylesheet" href="ionicons/css/ionicons.css">
+  		<link rel="stylesheet" href="styles.css">
 
-    		google.charts.load('current', {'packages':['corechart', 'bar']});
-      		google.charts.setOnLoadCallback(drawChart);
-      		google.charts.setOnLoadCallback(drawChartBar);
-
-      		function drawChart() {
-      			var data = google.visualization.arrayToDataTable([
-          			['Week', 'Net Comp', 'Analyzer HR', 'Question Right'],
-          			['Week48', 600, 400, 300],
-          			['Week49', 700, 300, 100],
-          			['Week50', 800, 500, 300],
-          			['Week51', 900, 700, 300],
-          			['Week52', 300, 200, 100]
-        		]);
-
-        		var options = {
-          			vAxis: {
-            			ticks: [0, 500, 1000]
-          			},
-          		
-          			colors:['#ed6e37','#259e01','#15a0c8'],
-           		
-           			legend:{
-              			position:"bottom"
-            		},
-        		};
-
-        		var chart = new google.visualization.AreaChart(document.getElementById('revenue'));
-        		chart.draw(data, options);
-      		}
-
-      		function drawChartBar() {
-        		var data = google.visualization.arrayToDataTable([
-          			['Week', 'Net Comp', 'Analyzer HR', 'Question Right'],
-          			['Week48', 6, 4, 3],
-          			['Week49', 7, 3, 1],
-          			['Week50', 8, 5, 3],
-          			['Week51', 9, 7, 3],
-          			['Week52', 3, 2, 1]
-        		]);
-
-		        var options = {
-        		  	chart: {
-            			title: 'Instalations per day'
-          			},
-          			
-          			legend:{
-            			position:"bottom"
-            		},
-          			
-          			vAxis: {
-            			ticks: [0, 5, 10]
-          			},		
-          			
-          			colors:['#ed6e37','#259e01','#15a0c8'] 
-        		};
-
-        		var chart = new google.visualization.ColumnChart(document.getElementById('instalations'));
-      			chart.draw(data, options);
-      		}
-    </script>
   </head>
 
   <body>
     
-    <div>
-  		<div id="revenue"></div>
+    <div class="main-div">
+    	<div class="title-box">
+
+    		<div class="icon-box">
+    			<div class="icon-box_two">
+    				<i class="ion ion-social-usd"></i>
+    			</div>
+    		</div>
+
+        <h3 class="title">Ravenue by Solution</h3>
+
+    	</div>
+      <div class="content">
+  		    <div id="revenue"></div>
+          <div class="info-block">
+              <i class="ion ion-social-usd"></i>  
+              <span class="price">32,556</span>
+              <span class="subtitle">Ravenue Stream</span>
+              
+              <div class="btn shadow">
+                  <a class="shadow_inset">
+                      Revenue Analysis
+                  </a>
+              </div>
+          </div>
+      </div>
   	</div>
 
-  	<div>
-  		<div id="instalations"></div>
+  	<div class="main-div">
+  	    <div id="instalations"></div>
+
   	</div>
 
 
