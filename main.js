@@ -23,6 +23,7 @@ google.charts.setOnLoadCallback(drawChartBar);
        			legend:{
            			position:"bottom"
          		},
+            pointsVisible:true 
      		};
 
      		var chart = new google.visualization.AreaChart(document.getElementById('revenue'));
@@ -40,6 +41,7 @@ google.charts.setOnLoadCallback(drawChartBar);
      		]);
 
         var options = {
+            width:500,
      		  	chart: {
           			title: 'Instalations per day'
        			},
@@ -52,7 +54,9 @@ google.charts.setOnLoadCallback(drawChartBar);
            			ticks: [0, 5, 10]
        			},		
           			
-       			colors:['#ed6e37','#259e01','#15a0c8'] 
+       			colors:['#ed6e37','#259e01','#15a0c8'],
+
+
      		};
 
      		var chart = new google.visualization.ColumnChart(document.getElementById('instalations'));

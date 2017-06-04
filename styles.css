@@ -48,8 +48,9 @@ i{
 	right: 0;
 	top:0;
 	width:200px;
-	text-align: center;
+	text-align: right;
 	padding:20px 0;
+	padding-right: 30px;
 }
 .price{
 	font-size: 35px;
@@ -65,9 +66,8 @@ i{
 }
 .subtitle{
 	color: #215e8a;
-	font-size: 9px;
+	font-size: 12px;
 	display: block;
-	padding-left: 23px;
 }
 .btn{
 	margin-top: 70px;
@@ -88,7 +88,7 @@ i{
 
 .shadow{
     max-width: 550px;
-    padding: 7px;
+    padding: 7px 4px;
     box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
 }
 
